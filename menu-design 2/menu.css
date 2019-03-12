@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* navbar */
+
+.navbar{
+    text-align: right;
+    padding: 2rem;
+    background: rgb(11, 39, 63);
+    position: sticky;
+    top: 0;
+}
+
+.navbar img{
+    width: 4rem;
+    float: left;
+    margin-top: -1.6rem;
+}
+
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.navbar a:hover{
+    background: #fff;
+    color: rgb(11, 39, 63);
+    border-radius: 5px;
+}
+
+#toggler{
+    opacity: 0;
+    display: none;
+}
+
+.hamburger{
+    display: none;
+}
+
+.contenu-img{
+    background: url('./img/pexels-photo-66997.jpeg') no-repeat center center/cover;
+    height: 87vh;
+}
+
+.contenu-text{
+    background: rgba(12, 27, 41, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.contenu-text h1{
+    color: #fff;
+    font-size: 5rem;
+}
+
+/*  sa se parti mobile la */
+
+@media(max-width: 768px){
+
+    .navbar{
+        padding: 1rem;
+    }
+    .navbar img{
+        margin-top: 0.5rem;
+        width: 3rem;
+    }
+
+
+    .hamburger{
+        display: block;
+        font-size: 50px;
+        color: rgb(22, 93, 155);
+    }
+
+    /* activer menu */
+    .menu{
+        display: none;
+    }
+
+    #toggler:checked + .menu{
+        display: block;
+    }
+
+    .hamburger{
+        cursor: pointer;
+    }
+
+
+    .menu a{
+        display: block;
+        text-align: center;
+        background: rgb(22, 93, 155);
+        margin-bottom: 1rem;
+        border-radius: 5px;
+
+    }
+
+    /*  showcase */
+
+    .contenu-text h1{
+        color: #fff;
+        font-size: 3rem;
+    }
+    
+    
+
+}
